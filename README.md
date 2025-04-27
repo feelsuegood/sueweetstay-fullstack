@@ -1,6 +1,7 @@
 # 🍭 SueweetStay
 
-A simple platform to browse, book, and review accommodations. This project is built for **learning and portfolio purposes**.
+A simple platform to browse, book, and review accommodations.  
+This project is built for **learning and portfolio purposes**.
 
 ## ✨ Features
 
