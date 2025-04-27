@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "sueweetstay-backend"
+version = "0.1.0"
+description = ""
+authors = ["Sue <sue.jeong5@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.4"
+django-cors-headers = "^4.7.0"
+djangorestframework = "^3.16.0"
+strawberry-graphql = {extras = ["debug-server"], version = "^0.266.0"}
+strawberry-graphql-django = "^0.58.0"
+pyjwt = "^2.10.1"
+django-environ = "^0.12.0"
+requests = "^2.32.3"
+dj-database-url = "^2.3.0"
+psycopg2-binary = "^2.9.10"
+whitenoise = {extras = ["brotli"], version = "^6.9.0"}
+gunicorn = "^23.0.0"
+uvicorn = "^0.34.2"
+sentry-sdk = {extras = ["django"], version = "^2.26.1"}
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^25.1.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

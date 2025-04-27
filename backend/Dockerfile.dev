@@ -1,0 +1,27 @@
+# backend/Dockerfile.dev
+
+FROM python:3.11
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /app
+
+# install poetry
+RUN pip install poetry
+
+# disable poetry venv creation
+ENV POETRY_VIRTUALENVS_CREATE=false
+
+# copy dependency files first
+COPY pyproject.toml poetry.lock ./
+
+# install dependencies
+RUN poetry install --no-root
+
+# copy the rest of files in backend
+COPY . .
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
