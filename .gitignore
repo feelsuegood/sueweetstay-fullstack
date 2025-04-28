@@ -1,7 +1,7 @@
 *.zip
 backend/uploads
 backend/local
-frontend/node_mondules
+frontend/node_modules
 .vscode/
 .cursor/
 .DS_Store

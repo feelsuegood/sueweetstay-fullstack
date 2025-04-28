@@ -70,15 +70,19 @@ export default function Header() {
     mutation.mutate();
   };
   useEffect(() => {
-    toast({
-      status: "info",
-      title: "Practice Project",
-      description:
-        "This website is part of a personal portfolio and is for educational and non-commercial purposes only.",
-      isClosable: true,
-      duration: 20000,
-      position: "top",
-    });
+    const hasVisited = sessionStorage.getItem("hasVisited");
+    if (!hasVisited) {
+      toast({
+        status: "info",
+        title: "Welcome to My Practice Project",
+        description:
+          "This website is part of my personal portfolio and is for educational and non-commercial purposes only.",
+        isClosable: true,
+        duration: 20000,
+        position: "top",
+      });
+    }
+    sessionStorage.setItem("hasVisited", "true");
   }, []);
 
   return (
