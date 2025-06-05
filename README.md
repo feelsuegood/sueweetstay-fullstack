@@ -1,4 +1,4 @@
-# 🍭 SueweetStay - Fullstack Project
+# 💌 SueweetStay - Fullstack Project
 
 A fullstack Airbnb-inspired web application built for **learning and portfolio purposes**.
 
