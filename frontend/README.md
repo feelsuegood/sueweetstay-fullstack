@@ -1,4 +1,4 @@
-# 🍭 Sueweetstay - Frontend
+# 💌 Sueweetstay - Frontend
 
 An Airbnb-inspired web app built with React and TypeScript.
 

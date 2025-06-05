@@ -22,7 +22,7 @@ import useUser from "../lib/useUser";
 import { logOut } from "../api";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { LuCandy } from "react-icons/lu";
+import { LuCalendarHeart } from "react-icons/lu";
 import { useEffect, useRef } from "react";
 
 export default function Header() {
@@ -107,7 +107,7 @@ export default function Header() {
     >
       <Box color={logoColor}>
         <Link to={"/"}>
-          <LuCandy size={"48"} />
+          <LuCalendarHeart size={"48"} />
         </Link>
       </Box>
       <HStack spacing={2}>
