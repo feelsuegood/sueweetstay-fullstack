@@ -15,6 +15,7 @@ import os
 import environ
 import dj_database_url
 import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 
 env = environ.Env()
@@ -236,6 +237,15 @@ REST_FRAMEWORK = {
     ]
 }
 
+
+def before_send(event, hint):
+    if "exc_info" in hint:
+        exc_type, exc_value, tb = hint["exc_info"]
+        if isinstance(exc_value, SystemExit):  # SIGTERM often occurs as SystemExit
+            return None  # Don't send to Sentry
+    return event  # Send the rest of the events
+
+
 if not DEBUG:
     SESSION_COOKIE_DOMAIN = ".sueweetstay.com"
     CSRF_COOKIE_DOMAIN = ".sueweetstay.com"
@@ -244,4 +254,6 @@ if not DEBUG:
         # Add data like request headers and IP for users,
         # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
         send_default_pii=True,
+        integrations=[DjangoIntegration()],
+        before_send=before_send,
     )

@@ -16,6 +16,10 @@ A full-stack Airbnb-inspired web application built for **learning and portfolio 
 - 📝 Leave reviews
 - 📱 Responsive, mobile-friendly design
 - 🔢 Type-safe frontend development with TypeScript
+- 🔍 GraphQL API support
+- 🔒 Multiple authentication methods (JWT, Token, Session)
+- 📊 Real-time error monitoring with Sentry
+- ☁️ Media file management with Cloudflare Images
 
 ---
 
@@ -27,6 +31,9 @@ A full-stack Airbnb-inspired web application built for **learning and portfolio 
 - Django REST Framework
 - PostgreSQL (for production)
 - Cloudflare Images (for media uploads)
+- Sentry (error monitoring)
+- GraphQL with Strawberry
+- JWT & Token Authentication
 
 ### 🌐 Frontend
 
@@ -72,6 +79,8 @@ REACT_APP_KAKAO_CLIENT_ID=your_kakao_client_id
 - Django secret key
 - Database connection settings
 - Cloudflare API credentials
+- Sentry DSN
+- Social Login credentials (GitHub, Kakao)
 
 ### 3. Production build
 
@@ -105,6 +114,25 @@ sueweetstay-fullstack/
 ├── docker-compose.prod.yml
 ├── README.md
 ```
+
+---
+
+## 🔧 Monitoring & Error Tracking
+
+- **Sentry Integration**
+  - Real-time error tracking and monitoring
+  - User behavior and performance analysis
+  - Early detection of issues in production environments
+
+---
+
+## 🔒 Authentication
+
+- **Multiple authentication systems**
+  - JWT authentication
+  - Token authentication
+  - Session authentication
+  - Social Login (GitHub, Kakao)
 
 ---
 
@@ -146,6 +174,6 @@ sueweetstay-fullstack/
 
 ---
 
-## 💖 Note
+## 🗒️ Note
 
 - This website is part of my personal portfolio and is intended for educational and non-commercial purposes only.
