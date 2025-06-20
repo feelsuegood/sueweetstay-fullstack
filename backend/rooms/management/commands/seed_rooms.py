@@ -6,7 +6,7 @@ from django.utils import timezone
 
 
 class Command(BaseCommand):
-    help = "Seed 19 Room entries"
+    help = "Seed 20 Room entries"
 
     def handle(self, *args, **kwargs):
         if not User.objects.exists():
@@ -40,9 +40,10 @@ class Command(BaseCommand):
             "Boho Chic Escape",
             "Tropical Oasis Retreat",
             "Spacious Poolside Villa",
+            "Romantic Garden Getaway",
         ]
 
-        for i in range(19):
+        for i in range(20):
             Room.objects.create(
                 name=room_names[i],
                 country="Australia",
@@ -59,4 +60,4 @@ class Command(BaseCommand):
                 updated_at=timezone.now(),
             )
 
-        self.stdout.write(self.style.SUCCESS("✅ Successfully seeded 19 rooms."))
+        self.stdout.write(self.style.SUCCESS("✅ Successfully seeded 20 rooms."))
