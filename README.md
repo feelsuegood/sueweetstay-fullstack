@@ -1,6 +1,6 @@
 # 💌 SueweetStay - Fullstack Project
 
-A fullstack Airbnb-inspired web application built for **learning and portfolio purposes**.
+A full-stack Airbnb-inspired web application built for **learning and portfolio purposes**.
 
 - **Frontend:** React + TypeScript + Chakra UI
 - **Backend:** Django + Django REST Framework
@@ -58,14 +58,14 @@ docker compose -f docker-compose.dev.yml up --build
 
 ### 2. Environment Variables
 
-#### Frontend `.env`
+#### Front end `.env`
 
 ```
 REACT_APP_GH_CLIENT_ID=your_github_client_id
 REACT_APP_KAKAO_CLIENT_ID=your_kakao_client_id
 ```
 
-#### Backend `.env`
+#### Back end `.env`
 
 (If using in production)
 
@@ -120,7 +120,7 @@ sueweetstay-fullstack/
 
 - 📚 **Personal Challenge: Experiences Pages**
 
-  - Applied same structure as Rooms to develop Experiences feature independently.
+  - Applied the same structure as Rooms to develop the Experiences feature independently.
 
 - 🔢 **Type-Safe Development**
 
@@ -143,10 +143,9 @@ sueweetstay-fullstack/
 
 - Based on [Nomadcoders Airbnb Clone](https://nomadcoders.co/airbnb-clone/lectures/3926)
 - Inspired by [Airbnb](https://www.airbnb.com)
-- Special thanks to open-source contributors and mentors!
 
 ---
 
 ## 💖 Note
 
-> This website is part of my personal portfolio and is intended for educational and non-commercial purposes only.
+- This website is part of my personal portfolio and is intended for educational and non-commercial purposes only.
