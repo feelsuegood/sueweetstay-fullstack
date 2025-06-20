@@ -240,7 +240,7 @@ if not DEBUG:
     SESSION_COOKIE_DOMAIN = ".sueweetstay.com"
     CSRF_COOKIE_DOMAIN = ".sueweetstay.com"
     sentry_sdk.init(
-        dsn="https://3a0dc68bb6472ce4e54a7c4afe0bf3a9@o4509206079864832.ingest.de.sentry.io/4509206091006032",
+        dsn=env("SENTRY_DSN"),
         # Add data like request headers and IP for users,
         # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
         send_default_pii=True,
