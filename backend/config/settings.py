@@ -243,6 +243,11 @@ def before_send(event, hint):
         exc_type, exc_value, tb = hint["exc_info"]
         if isinstance(exc_value, SystemExit):  # SIGTERM often occurs as SystemExit
             return None  # Don't send to Sentry
+        # ignore RuntimeError related to lifespan
+        if isinstance(exc_value, RuntimeError) and str(exc_value).startswith(
+            "Django can only handle ASGI/HTTP connections"
+        ):
+            return None
     return event  # Send the rest of the events
 
 
